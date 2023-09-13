@@ -1,0 +1,10 @@
+C:\Users\Francisco Castillo.000\source\repos\ArbolCastilloCorpus-CastilloPardo\ArbolCastilloCorpus-CastilloPardo\bin\Debug\ArbolCastilloCorpus-CastilloPardo.exe.config
+C:\Users\Francisco Castillo.000\source\repos\ArbolCastilloCorpus-CastilloPardo\ArbolCastilloCorpus-CastilloPardo\bin\Debug\ArbolCastilloCorpus-CastilloPardo.exe
+C:\Users\Francisco Castillo.000\source\repos\ArbolCastilloCorpus-CastilloPardo\ArbolCastilloCorpus-CastilloPardo\bin\Debug\ArbolCastilloCorpus-CastilloPardo.pdb
+C:\Users\Francisco Castillo.000\source\repos\ArbolCastilloCorpus-CastilloPardo\ArbolCastilloCorpus-CastilloPardo\obj\Debug\ArbolCastilloCorpus-CastilloPardo.csproj.AssemblyReference.cache
+C:\Users\Francisco Castillo.000\source\repos\ArbolCastilloCorpus-CastilloPardo\ArbolCastilloCorpus-CastilloPardo\obj\Debug\ArbolCastilloCorpus_CastilloPardo.Form1.resources
+C:\Users\Francisco Castillo.000\source\repos\ArbolCastilloCorpus-CastilloPardo\ArbolCastilloCorpus-CastilloPardo\obj\Debug\ArbolCastilloCorpus_CastilloPardo.Properties.Resources.resources
+C:\Users\Francisco Castillo.000\source\repos\ArbolCastilloCorpus-CastilloPardo\ArbolCastilloCorpus-CastilloPardo\obj\Debug\ArbolCastilloCorpus-CastilloPardo.csproj.GenerateResource.cache
+C:\Users\Francisco Castillo.000\source\repos\ArbolCastilloCorpus-CastilloPardo\ArbolCastilloCorpus-CastilloPardo\obj\Debug\ArbolCastilloCorpus-CastilloPardo.csproj.CoreCompileInputs.cache
+C:\Users\Francisco Castillo.000\source\repos\ArbolCastilloCorpus-CastilloPardo\ArbolCastilloCorpus-CastilloPardo\obj\Debug\ArbolCastilloCorpus-CastilloPardo.exe
+C:\Users\Francisco Castillo.000\source\repos\ArbolCastilloCorpus-CastilloPardo\ArbolCastilloCorpus-CastilloPardo\obj\Debug\ArbolCastilloCorpus-CastilloPardo.pdb
