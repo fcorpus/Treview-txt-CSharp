@@ -17,9 +17,15 @@ namespace ArbolCastilloCorpus_CastilloPardo
         public Form1()
         {
             InitializeComponent();
+            ImageList imageList = new ImageList();
+            imageList.Images.Add(Image.FromFile(@"C:\Users\Francisco Castillo.000\Downloads\documentsfolderblank_99359.png"));
+            imageList.Images.Add(Image.FromFile(@"C:\Users\Francisco Castillo.000\Downloads\downloadfolderblank_99350.png"));
+            arbolito.ImageList = imageList;
+            arbolito.ImageIndex = 0;
+            arbolito.SelectedImageIndex = 1;
         }
 
-        /*private void btnAbrir_Click(object sender, EventArgs e)
+        private void btnAbrir_Click(object sender, EventArgs e)
         {
             string[] lines;
 
@@ -29,88 +35,50 @@ namespace ArbolCastilloCorpus_CastilloPardo
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                lines = File.ReadAllLines(openFileDialog.FileName);
                 arbolito.Nodes.Clear();
-                TreeNode fatherNode = null;
-                int previousLevel = -1;
-                foreach (string line in lines)
+                lines = File.ReadAllLines(openFileDialog.FileName);
+             
+                foreach (string line in lines) 
                 {
-                    int level = 0; ;
-
-                    while (line[level] == '.')
-                        level++;
-
-                    string textNode = line.TrimStart('.');
-                    TreeNode newNode = new TreeNode(textNode);
-
-                    if (level == previousLevel)
-                    {
-                        if (fatherNode != null)
-                        {
-                            fatherNode.Parent.Nodes.Add(newNode);
-                        }
-                    }
-                    else if (level > previousLevel)
-                    {
-                        if (fatherNode != null)
-                        {
-                            fatherNode.Nodes.Add(newNode);
-                        }
-                    }
-                    else
-                    {
-                        for (int i = previousLevel; i >= level; i--)
-                            fatherNode = fatherNode.Parent;
-                        fatherNode.Parent.Nodes.Add(newNode);
-                    }
-                    fatherNode = newNode;
-                    previousLevel = level;
+                    int level = 0;
+                    TreeNode node = arbolito.TopNode;
+                    addNode(line,node,level);
                 }
             }
-
-        }*/
-
-
-        private void btnAbrir_Click(object sender, EventArgs e)
+        }
+        private void addNode(string line, TreeNode node, int level)
         {
-            string[] lines;
-
-            OpenFileDialog openFileDialog = new OpenFileDialog();   
-
-            openFileDialog.Filter = "Archivos de texto|*.txt";
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            if (!line[0].Equals('.'))
             {
-                lines = File.ReadAllLines(openFileDialog.FileName);
-                arbolito.Nodes.Clear();
-                foreach (string line in lines)
-                {
-                    TreeNode fatherNode = null;
-                    string[] nodes = line.Split('.');
-                    /*if (nodes[0] != "")
-                        fatherNode = null;
-                    else
-                        fatherNode = new TreeNode(nodes[0].Trim());*/
-                    foreach (string textNode in nodes)
-                    {
-                        TreeNode newNode = new TreeNode(textNode.Trim());
-                        if (fatherNode == null)
-                        {
-                             arbolito.Nodes.Add(newNode);
-                             fatherNode = newNode;
-                        }
-                        else
-                        {
-                             fatherNode.Nodes.Add(newNode);
-                             fatherNode = newNode;
-                        }
-                    }
-                }
+                string nodeName = line;
+                TreeNode newNode = new TreeNode(nodeName);
+                if (level == 0)
+                    arbolito.Nodes.Add(newNode);
+                else
+                    node.Nodes.Add(newNode);
+                node = newNode;
             }
-
+            else
+            {
+                level++;
+                string newLine = line.Substring(1).Trim();
+                if (level > 1)
+                {
+                    node = node.FirstNode; //arbolito.TopNode.FirstNode
+                    addNode(newLine, node, level);
+                }
+                else
+                {
+                    addNode(newLine, node, level);
+                }
+                
+            }
         }
 
 
     }
+
+
 }
+
 

@@ -44,9 +44,10 @@
             // 
             // arbolito
             // 
-            this.arbolito.Location = new System.Drawing.Point(236, 12);
+            this.arbolito.Dock = System.Windows.Forms.DockStyle.Right;
+            this.arbolito.Location = new System.Drawing.Point(310, 0);
             this.arbolito.Name = "arbolito";
-            this.arbolito.Size = new System.Drawing.Size(490, 368);
+            this.arbolito.Size = new System.Drawing.Size(490, 450);
             this.arbolito.TabIndex = 1;
             // 
             // Form1
